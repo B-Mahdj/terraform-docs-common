@@ -16,15 +16,14 @@ jobs:
 
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@master
         with:
           args: |
-            --format json
+            --format markdown
             --accept '100..=403, 405..=599'
             --no-progress
             --timeout 30
             --max-redirects 10
-            --mode emoji
             .
           fail: false
 
